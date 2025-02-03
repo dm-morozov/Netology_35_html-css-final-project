@@ -82,7 +82,12 @@
     </section>
 
     <main class="container main">
-        <section class="inspiring-post">
+
+        <!-- Так как в секции inspiring-post нет заголовка, мы не можем записать 
+        <section class="inspiring-post">. Валидатор ругается.  
+        Изменим тег на <div> -->
+
+        <div class="inspiring-post">
             <article class="inspiring-post__item">
                 <img src="images/last-post1.jpg" alt="10 мест, ради которых стоит проснуться на рассвете" class="inspiring-post__img">
                 <div class="inspiring-post__tags">
@@ -163,7 +168,7 @@
                 </header>
                 <p class="inspiring-post__text">Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.</p>
             </article>
-        </section>
+        </div>
 
         <aside class="sidebar">
             <section class="latest-posts">
