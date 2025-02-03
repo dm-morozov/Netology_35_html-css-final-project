@@ -227,18 +227,12 @@ body {
     transform: translateX(-2px);
 }
 
-.inspiring-posts {
+.inspiring-post {
     display: flex;
     flex-direction: column;
     row-gap: 59px;
     min-width: 775px;
     max-width: 775px;
-}
-
-
-.inspiring-post {
-    display: flex;
-    flex-direction: column;
 }
 
 .inspiring-post__img {
