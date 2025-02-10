@@ -56,7 +56,7 @@ body {
 
 .header {
     position: relative;
-    height: 450px;
+    min-height: 450px;
     background: url('../images/banner-bg.jpg') no-repeat center / cover;   
     z-index: 0;
 }
@@ -174,13 +174,10 @@ body {
 
 .trending__border {
     border: 3px solid rgba(181, 159, 91, 0.6);
-    height: 145px;
     margin: 16px 22px;
     padding: 34px 32px;
-}
-
-.trending__item:nth-child(2) .trending__border {
-    height: 168px;
+    max-height: 100%;
+    overflow-y: hidden;
 }
 
 
@@ -235,12 +232,17 @@ body {
     max-width: 775px;
 }
 
+.inspiring-post__item {
+    display: flex;
+    column-gap: 28px;
+}
+
+
+
 .inspiring-post__img {
     width: auto;
     height: 295px;
     object-fit: cover;
-    float: left;
-    margin: 0 28px 0 0;
 }
 
 .inspiring-post__tags {
@@ -307,6 +309,8 @@ body {
     font-size: 15px;
     line-height: 22px;
     margin: 11px auto;
+    max-height: 115px;
+    overflow-y: hidden;
 }
 
 
@@ -627,14 +631,11 @@ body {
     margin-left: 3px;
 }
 
-.our-products__head {
-    margin-top: 57px;
-}
-
 .our-products {
     display: flex;
     flex-direction: column;
     transform: translateX(-3px);
+    margin-top: 57px;
 }
 
 .our-products__title {
