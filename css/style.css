@@ -212,6 +212,22 @@ body {
     z-index: -1;
 }
 
+.trending__item-garden {
+    background: url('../images/trend1.jpg') no-repeat center / cover;
+}
+
+.trending__item-cheese {
+    background: url('../images/trend2.jpg') no-repeat center / cover;
+}
+
+.trending__item-travel {
+    background: url('../images/trend3.jpg') no-repeat center / cover;
+}
+
+.trending__item-vitamin {
+    background: url('../images/trend4.jpg') no-repeat center / cover;
+}
+
 .trending__border {
     border: 3px solid rgba(181, 159, 91, 0.6);
     margin: 16px 15px;
@@ -855,6 +871,213 @@ body {
     color: rgba(0, 0, 0, 0.54);
     transform: translateX(3px);
 }
+
+
+.popup__checkbox {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; 
+    justify-content: center; 
+    align-items: center; 
+    opacity: 0; 
+    pointer-events: none; 
+    transition: opacity 0.3s ease;
+}
+
+.popup__checkbox:checked + .popup {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup__content {
+    position: relative;
+    background-color: #fff;
+    padding: 10px 23px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 370px;
+    max-height: 80%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto 15px;
+    min-height: 545px;
+    row-gap: 12px;
+    font-size: 13px;
+}
+
+.popup__subscribe {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.popup__close {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.popup__title {
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.popup__title::after {
+    content: '';
+    display: block;
+    width: 66px;
+    height: 3px;
+    background-color: var(--color-accent);
+    opacity: 0.4;
+    margin: 10px auto 0;
+}
+
+.popup__label {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.popup__select {
+    height: 47px;
+    border: none;
+    width: 100%;
+    padding: 0 19px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--color-text);
+    appearance: none;
+    position: relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f3f7f6;
+}
+
+.popup__select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.popup__select-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    background: url('/svg/form-arrows.svg') no-repeat center/contain;
+    transform: translateY(-50%);
+    pointer-events: none; /* Чтобы стрелка не перехватывала клики */
+}
+
+.popup__select::placeholder {
+    color: var(--color-text);
+}
+
+.popup__select:focus {
+    background-color: #ebeff0;
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--color-accent);
+
+}
+
+.popup__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.popup__legend {
+    margin-bottom: 9px;
+}
+
+.popup__subscribe input {
+    display: none;
+}
+
+.popup__subscribe label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.popup__subscribe label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url('/svg/form-empty-circle.svg') no-repeat center/contain;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.popup__subscribe input:checked + label::before {
+    background: url('/svg/form-circle.svg') no-repeat center/contain;
+}
+
+.popup__radio {
+    display: flex;
+    column-gap: 37px;
+}
+
+.popup__label {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.popup__textarea {
+    background-color: #f3f7f6;
+    border: none;
+    padding: 17px 23px;
+    resize: none;
+    height: 133px;
+    color: var(--color-text);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.popup__textarea::placeholder {
+    color: var(--color-text);
+    opacity: 0.5;
+}
+
+.popup__textarea:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--color-accent);
+
+}
+
+
+.popup__btn {
+    width: 100%;
+    height: 48px;
+    border: none;
+    background-color: var(--color-accent);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--color-bg-text);
+    transition: background-color 0.3s ease;
+}
+
+.popup__btn:hover {
+    background-color: var(--color-button-hover);
+}
+
+
+
+
 
 /* Планшетная версия */
 @media (min-width: 641px) {
