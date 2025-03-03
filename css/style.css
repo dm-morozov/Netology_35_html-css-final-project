@@ -885,20 +885,20 @@ body {
     justify-content: center; 
     align-items: center; 
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-    transform: scale(0.9);
 }
 
 ._hidden {
     opacity: 0; 
     visibility: hidden;
     pointer-events: none; 
+    transform: scale(0.9);
 }
 
 .popup__checkbox:checked + .popup {
-    transform: scale(1);
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
+    transform: scale(1);
 }
 
 .popup__content {
